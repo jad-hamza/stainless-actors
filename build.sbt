@@ -64,3 +64,11 @@ lazy val `kvs` = project
     Compile / mainClass := Some("KVS"),
   )
 
+lazy val `fastsync` = project
+  .in(file("examples/fastsync"))
+  .enablePlugins(StainlessPlugin)
+  .settings(commonSettings, actorsProjectSettings)
+  .settings(
+    name := "stainless-actors-fastsync",
+    Compile / mainClass := Some("FastSync"),
+  )
